@@ -26,9 +26,9 @@ jobs:
         include-prerelease: true
     - run: dotnet publish -c Release -o release
     
-    # changes the base-tag in index.html from '/' to 'cognates' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to cognates
-      run: sed -i 's/<base href="\/" \/>/<base href="\/cognates\/" \/>/g' release/wwwroot/index.html
+    # changes the base-tag in index.html from '/' to 'Cognate-Visualization' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to Cognate-Visualization
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Cognate-Visualization\/" \/>/g' release/wwwroot/index.html
 
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
